@@ -70,7 +70,7 @@ public class BasicTestSetup {
         System.out.println(expectedString);
         System.out.println(actualResult);
         System.out.println("- actual");
-        System.out.println("Verdict: " + actualResult.replaceAll("\\.(\\d)*#", "#").contains(expectedString.replaceAll("\\.(\\d)*#", "#")));
+        System.out.println("Verdict: " + actualResult.replaceAll("\\d\\.(\\d)*#", "#").contains(expectedString.replaceAll("\\d\\.(\\d)*#", "#")));
  }
 
     public static void tearDown(){
