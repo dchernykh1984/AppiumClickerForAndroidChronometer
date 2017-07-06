@@ -21,17 +21,13 @@ public class BasicTestSetup {
     }
 
     public static void setUp() throws Exception {
-
-        File appDir = new File("F:\\");
-        File app = new File(appDir, "SportTimer.apk");
+        File app = new File("SportTimer.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("device","DcherDeviceName");
 
         //mandatory capabilities
         capabilities.setCapability("deviceName","DcherDeviceName");
         capabilities.setCapability("platformName","android");
 
-        //other caps
         capabilities.setCapability("app", app.getAbsolutePath());
         driver =  new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         System.out.println("Connected");
